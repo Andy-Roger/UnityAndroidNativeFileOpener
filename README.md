@@ -8,8 +8,14 @@ How to set it up:
 - Clone this repo into your Assets folder
 
 How to use the example:
-- Add this tag to your AndroidManifest.xml file in Assets/Plugins/Android inside of the ```<application>nest here</application>:``` tag.
-![alt text](https://github.com/Andy-Roger/UnityAndroidNativeFileOpener/blob/master/Images/AssetManifestProviderImage.png)
+- Add this tag to your AndroidManifest.xml file in Assets/Plugins/Android inside of the ```<application>:``` tag.
+```
+<provider
+  android:name="com.cartoontexas.andyr.unityplugin.UnitySSContentProvider"
+  android:authorities="a_very_unique_name"
+  android:exported="false"
+  android:grantUriPermissions="true" />
+```
 - The ```android:authorities``` attribute should be a unique name, make this your app bundleID to assure uniqueness.
 - Open example scene: "AndroidNativeFileOpenerExample"
 - Add the example scene to your build settings and build to your device.
