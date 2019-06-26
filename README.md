@@ -8,7 +8,9 @@ How to set it up:
 - Clone this repo into your Assets folder
 
 How to use the example:
-- Add this tag to your AndroidManifest.xml file in Assets/Plugins/Android inside of the ```<application>:``` tag.
+- Add an AndroidManifest.xml file into the Assets/Plugins/Android folder
+- If you do not have an AndroidManifest.xml already, you can find the Unity generated Android Manifest file in your ProjectName/Temp/StagingArea after you build the project once.
+- Nest the below snippet inside of the AndroidManifest's ```<application></application>:``` tag.
 ```
 <provider
   android:name="com.cartoontexas.andyr.unityplugin.UnitySSContentProvider"
